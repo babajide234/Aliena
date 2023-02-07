@@ -30,24 +30,24 @@ dots.forEach(function(dot, index) {
 });
 
 
-var startX = 0;
-var endX = 0;
+// var startX = 0;
+// var endX = 0;
 
-slides[0].addEventListener('touchstart', function(e) {
-  startX = e.touches[0].pageX;
-});
-slides[0].addEventListener('touchend', function(e) {
-  endX = e.changedTouches[0].pageX;
-  if (startX > endX + 50) {
-    nextSlide();
-  } else if (startX < endX - 50) {
-    slides[currentSlide].classList.remove('active-slide');
-    dots[currentSlide].classList.remove('active-dot');
-    currentSlide = (currentSlide + slides.length - 1) % slides.length;
-    slides[currentSlide].classList.add('active-slide');
-    dots[currentSlide].classList.add('active-dot');
-  }
-});
+// slides[0].addEventListener('touchstart', function(e) {
+//   startX = e.touches[0].pageX;
+// });
+// slides[0].addEventListener('touchend', function(e) {
+//   endX = e.changedTouches[0].pageX;
+//   if (startX > endX + 50) {
+//     nextSlide();
+//   } else if (startX < endX - 50) {
+//     slides[currentSlide].classList.remove('active-slide');
+//     dots[currentSlide].classList.remove('active-dot');
+//     currentSlide = (currentSlide + slides.length - 1) % slides.length;
+//     slides[currentSlide].classList.add('active-slide');
+//     dots[currentSlide].classList.add('active-dot');
+//   }
+// });
 
 slides[currentSlide].classList.add('active-slide');
 dots[currentSlide].classList.add('active-dot');
